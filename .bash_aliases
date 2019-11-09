@@ -63,6 +63,10 @@ alias yyy="yank-cli -- xsel -b"
 alias yyl="yank-cli -l -- xsel -b"
 alias yyd=yankingd
 alias yyg=yankingg
+yankFromHistory() {
+    history | tac | awk '{$1=""; cmd=substr($0,$2); gsub("^ ","",cmd); print cmd}' | fzf | tr -d '\n' | sed 's/\\n/\n/g' | yy
+}
+alias yyh=yankFromHistory
 
 # Edit config files
 alias ea="vi /home/dmazuruk/.bash_aliases"
