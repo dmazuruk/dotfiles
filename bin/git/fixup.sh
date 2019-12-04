@@ -1,10 +1,10 @@
 #!/bin/bash
 
 available_files=$(git status -uall --porcelain \
-    | grep -e "^ M " -e "^ D " -e "^R ")
+    | grep -e "^ M " -e "^ D " -e "^R " -e "^RM ")
 
 available_files_names=$(echo "$available_files" \
-    | sed -e 's/^\( M\| D\|R \) //' \
+    | sed -e 's/^\( M\| D\|R \|RM \) //' \
     | sed -E 's/(^.*\s)//g' \
     | egrep ".*")
 
