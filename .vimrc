@@ -257,6 +257,9 @@ noremap <leader>v ^vg_
 " Use urlview to choose and open a url
 noremap <leader>u :w<Home>silent <End> !urlview<CR>
 
+" cut line specified by line number and paste it under the current line
+nmap <leader>j :<C-U> execute v:count . 'm.'<CR>
+
 " comment line with #
 imap <C-_> <esc><Plug>NERDCommenterToggleli
 nmap <C-_> <Plug>NERDCommenterToggle
