@@ -32,7 +32,7 @@ while c <= 'z'
 endw
 " Allow to use escape while recording macro, source:
 "https://stackoverflow.com/questions/41308915/vim-recording-a-macro-with-an-escape-key-press-does-not-work-correctly
-inoremap <Esc> <C-c>
+"inoremap <Esc> <C-c>
 
 " Invisible character colors
 highlight NonText guifg=#4a4a59
