@@ -6,7 +6,7 @@ esac
 
 /home/dmazuruk/tools/curlfire/curlfire -s 'https://github.com/pulls/review-requested' > /tmp/github
 
-requests_count=$(grep -Pzo "\\d+\\sOpen" /tmp/github | grep -Pzo "\\d+" | tr '\0' '\n')
+requests_count=$(grep -Pzo "\\d+\\sOpen" /tmp/github | grep -Pzo -m 1 "\\d+" | tr '\0' '\n')
 
 if [[ -z "$requests_count" ]]; then
   requests_count="0"
