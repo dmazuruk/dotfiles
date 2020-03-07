@@ -129,6 +129,10 @@ interval=10
 command=$HOME/.config/i3blocks/scripts/battery.sh BAT0
 interval=5
 
+[weather]
+command=curl "wttr.in/lublin?format=1"
+interval=1800
+
 # Date Time
 #
 [time_nyc]
