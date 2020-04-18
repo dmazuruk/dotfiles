@@ -89,6 +89,9 @@ alias wttrlub="curl wttr.in/lublin"
 wttr() {
    curl wttr.in/"$1"
 }
+mkcd() {
+    mkdir "$1" && cd "$1" || exit
+}
 
 alias cat="bat"
 alias ping='~/tools/prettyping --nolegend'
