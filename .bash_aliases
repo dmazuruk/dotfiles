@@ -193,3 +193,9 @@ fkill() {
     echo $pid | xargs kill -${1:-9}
   fi
 }
+
+unzip_d() {
+    zipfile="$1"
+    zipdir=$(basename "$1" .zip)
+    unzip -d "$zipdir" "$zipfile"
+}
